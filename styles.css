@@ -1,0 +1,383 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Add a default font */
+}
+
+h1 {
+    margin: 0;
+    padding: 2rem; /* Use rem for better responsiveness */
+    font-size: 2rem; 
+    text-align: center;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        padding: 1.5rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+header {
+    background-image: url('onlyjeffhead.jpg');
+    background-size: cover;
+    background-position: top center;
+    height: 25vh; /* Use viewport units for better responsiveness */
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem; 
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.intro {
+    padding: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2rem auto; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.person {
+    flex: 0 0 calc(33.33% - 1rem); /* Use rem for better responsiveness */
+    box-sizing: border-box;
+    height: 5rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        width: 80%;
+    }
+
+    .person {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .person {
+        flex: 0 0 calc(100% - 1rem);
+    }
+}
+
+.lightbox-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .lightbox-content {
+        width: 90%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lightbox-content {
+        width: 95%;
+        padding: 0.75rem;
+    }
+
+    #person-name {
+        font-size: 1.5rem;
+    }
+
+    #person-description {
+        font-size: 1.2rem;
+    }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Tim lightbox - Improved */
+
+.tim {
+    padding: 2rem;
+}
+
+.custom-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-lightbox-content {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90vw; 
+    max-height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#custom-lightbox-image {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; /* Prevent image distortion */
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    text-align: center;
+    width: 15vw; /* Use viewport units for better responsiveness */
+    min-width: 100px; /* Set a minimum width */
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tim img {
+    width: 100%; 
+    max-height: 150px; /* Set a maximum height */
+    object-fit: cover; 
+    margin-bottom: 0.5rem;
+}
+
+.image-description {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    color: #000000;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .image-box {
+        width: 30vw; 
+        min-width: 100px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        width: 40vw; 
+        min-width: 80px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-lightbox-content {
+        max-width: 90vw;
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-lightbox-content {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+}
+
+.main-section {
+    padding: 2rem;
+}
+
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lightbox Container */
+#jeffview {
+    display: none; /* Hide the lightbox initially */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.jeffviewcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-viewer-img {
+    max-width: 600px;  /* Adjust the width as needed */
+    max-height: 80%;  /* Limit the height */
+    width: auto;
+    height: auto;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #666;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Image Thumbnails */
+#jeffimg {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+#jeffimg img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#jeffimg img:hover {
+    transform: scale(1.05);
+}
+
+.lore {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+
+.lore h2 {
+    color: #444;
+    margin-top: 30px;
+    font-size: 1.8em;
+  }
+  
+.lore p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  .story {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+  }
+  
+  .story:last-child {
+    border-bottom: none;
+  }
+  
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+}
