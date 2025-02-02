@@ -175,7 +175,7 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     } else { // Currently in light mode
         themeStylesheet.setAttribute('href', 'styles.css');
-        themeToggleBtn.textContent = 'Switch to Light Mode';
+        themeToggleBtn.textContent = 'Switch to Enzo Mode';
         localStorage.setItem('theme', 'dark');
     }
 });
