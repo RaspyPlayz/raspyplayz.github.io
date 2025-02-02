@@ -6,6 +6,7 @@ html, body {
     overflow-x: hidden;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: #f5f5f5; /* Light background */
 }
 
 * {
@@ -20,8 +21,7 @@ h1 {
     font-size: 2rem; 
     text-align: center;
     line-height: 1.2;
-    color: rgb(255, 255, 255);
-
+    color: #ffffff; /* Dark text for contrast on light background */
 }
 
 @media (max-width: 768px) {
@@ -44,26 +44,27 @@ header {
     font-family: 'Arial', sans-serif;
     font-size: 48px;
     font-weight: bold;
-    color: transparent;
+    color: #ffffff; /* Light text for dark background */
     padding: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-image: url('onlyjeffhead.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 header::before {
     content: "";
+    color: white;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('onlyjeffhead.jpg');
-    background-size: cover;
-    background-position: center;
     z-index: -1;
     border-radius: 10px;
+    opacity: 0.8; /* Slightly transparent to blend with the header background */
 }
 
 header h1 {
@@ -109,18 +110,19 @@ h2 {
 }
 
 nav {
-    background-color: #444;
+    background-color: #e0e0e0; /* Light gray for nav background */
     padding: 2rem;
     text-align: center;
     transition: background-color 0.3s ease;
+    color:black
 }
 
 nav:hover {
-    background-color: #333; 
+    background-color: #d0d0d0; /* Slightly darker on hover */
 }
 
 nav a {
-    color: white;
+    color: #333; /* Dark text for contrast */
     margin: 0 1rem; 
     text-decoration: none;
     display: inline-block; 
@@ -129,12 +131,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #f39c12; 
-    transform: scale(1.3);
-}
-
-nav button:hover {
-    color: #f39c12;
+    color: #4a8aff; 
     transform: scale(1.3);
 }
 
@@ -160,11 +157,11 @@ nav button:hover {
 
 .intro {
     padding: 3rem;
-    background: linear-gradient(135deg, #333, #444); 
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Light gradient */
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    margin-top: 0rem; /* Adjust space above */
+    margin-top: 0rem;
     max-width: 1200px;
     width: 90%;
     font-family: 'Arial', sans-serif;
@@ -177,7 +174,7 @@ nav button:hover {
 
 .intro h2 {
     font-size: 3rem;
-    color: #fff;
+    color: #333;
     margin-bottom: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -187,7 +184,7 @@ nav button:hover {
 
 .intro p {
     font-size: 1.2rem;
-    color: #fff;
+    color: #333;
     margin-bottom: 1.5rem;
     line-height: 1.6;
     opacity: 0;
@@ -196,20 +193,21 @@ nav button:hover {
 
 .intro:hover {
     transform: scale(1.05); 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
+
 @media (max-width: 768px) {
     .intro {
         padding: 1.5rem;
-        margin: 1rem auto; /* Ensures centering on mobile */
+        margin: 1rem auto;
         max-width: 100%;
         width: 100%;
-        box-sizing: border-box; /* Ensures padding is included in width calculation */
+        box-sizing: border-box;
     }
 
     .intro h2 {
         font-size: 2.5rem;
-        text-align: center; /* Centers the header on mobile */
+        text-align: center;
     }
 
     .intro p {
@@ -241,45 +239,42 @@ nav button:hover {
 #people-heading {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     text-align: center;
-    margin: 2rem auto 1.5rem; /* Added top margin to prevent overlap */
+    margin: 2rem auto 1.5rem;
     padding: 1rem 1.5rem;
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    max-width: 90%; /* Responsive width */
+    max-width: 90%;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
 #people-heading:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(135deg, #444, #333);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
 }
 
-/* Tablet (medium screens) */
 @media (max-width: 768px) {
     #people-heading {
         font-size: 2rem;
         padding: 1rem;
         max-width: 95%;
-        margin: 1.5rem auto 1rem; /* Adjusted for spacing */
+        margin: 1.5rem auto 1rem;
     }
 }
 
-/* Mobile (small screens) */
 @media (max-width: 480px) {
     #people-heading {
         font-size: 1.5rem;
         padding: 0.8rem;
         max-width: 98%;
-        margin: 1rem auto 0.8rem; /* Adjusted for spacing */
+        margin: 1rem auto 0.8rem;
     }
 }
-
 
 .flex-container {
     display: flex;
@@ -295,7 +290,7 @@ nav button:hover {
     flex: 0 0 calc(33.33% - 1rem);
     box-sizing: border-box;
     height: 5rem;
-    border: 2px solid #333;
+    border: 2px solid #ccc;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -304,6 +299,7 @@ nav button:hover {
     text-align: center;
     padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #fff; /* Light background */
 }
 
 #lightbox .lightbox-content {  
@@ -313,15 +309,15 @@ nav button:hover {
     text-align: center;
     max-width: 500px;
     width: 80%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     animation: fadeIn 0.5s forwards;
 }
 
 .person:hover {
-    background-color: #444;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
 
@@ -355,7 +351,7 @@ nav button:hover {
     text-align: center;
     max-width: 500px;
     width: 80%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     animation: fadeIn 0.5s forwards;
@@ -404,7 +400,7 @@ nav button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8); /* Light overlay for lightbox */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,7 +418,7 @@ nav button:hover {
     right: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: white;
+    color: #333; /* Dark color for better visibility on light background */
 }
 
 .tim {
@@ -431,9 +427,9 @@ nav button:hover {
 
 .tim figure.image-box {
     flex: 0 0 auto;
-    width: 250px; /* Keep a consistent width */
-    min-height: 350px; /* Adjust this value based on your content, consider the height of your largest image + description + audio */
-    padding: 10px; /* Added padding to ensure space */
+    width: 250px;
+    min-height: 350px;
+    padding: 10px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -443,12 +439,12 @@ nav button:hover {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: #444;
+    background-color: #f5f5f5; /* Light background for image boxes */
 }
 
 .tim figure.image-box img {
     width: 100%;
-    height: 200px; /* Set a fixed height for images, adjust based on your largest image */
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -456,33 +452,33 @@ nav button:hover {
 
 .tim figcaption.image-description {
     margin-top: 10px;
-    margin-bottom: 10px; /* Adds space between description and audio */
+    margin-bottom: 10px;
+    color: #333; /* Dark text for contrast */
 }
 
 .tim figure.image-box audio {
     width: 100%;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .tim figure.image-box {
         width: 150px;
-        min-height: 250px; /* Adjust based on smaller screen size */
+        min-height: 250px;
     }
 
     .tim figure.image-box img {
-        height: 100px; /* Adjust for smaller screens */
+        height: 100px;
     }
 }
 
 @media (max-width: 480px) {
     .tim figure.image-box {
         width: 120px;
-        min-height: 220px; /* Further adjust for even smaller screens */
+        min-height: 220px;
     }
 
     .tim figure.image-box img {
-        height: 80px; /* Adjust for smaller screens */
+        height: 80px;
     }
 
     .tim figcaption.image-description {
@@ -493,15 +489,15 @@ nav button:hover {
 .tim figure.image-box {
     flex: 0 0 auto;
     width: 250px;
-    min-height: 400px; /* Increased to give more room for content */
-    padding: 15px; /* Increased padding for better spacing */
+    min-height: 400px;
+    padding: 15px;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     border-radius: 10px;
-    background-color: #444; /* subtle background to separate from other content */
+    background-color: #f5f5f5;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -509,53 +505,52 @@ nav button:hover {
 
 .tim figure.image-box img {
     width: 100%;
-    height: 220px; /* Adjusted height for a better balance */
+    height: 220px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 10px; /* Adds space below the image */
+    margin-bottom: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tim figcaption.image-description {
     margin-top: 10px;
-    margin-bottom: 15px; /* Increased space between description and audio */
-    font-size: 1rem; /* Slightly larger text for readability */
-    color: #fff; /* White text for better contrast on dark background */
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
 }
 
 .tim figure.image-box audio {
     width: 100%;
-    height: 40px; /* Increased height for better touch interaction */
-    background-color: #333;
+    height: 40px;
+    background-color: #e0e0e0;
     border-radius: 5px;
-    padding: 0 5px; /* Small padding inside the audio element */
+    padding: 0 5px;
 }
 
 /* Style the audio controls */
 .tim figure.image-box audio::-webkit-media-controls-panel {
-    background-color: #333;
+    background-color: #e0e0e0;
     border-radius: 5px;
 }
 
 /* Style the play button */
 .tim figure.image-box audio::-webkit-media-controls-play-button {
-    background-color: #f39c12;
+    background-color: #4a8aff;
     border-radius: 50%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Ensure consistent styling for Firefox */
 .tim figure.image-box audio::-moz-media-controls-panel {
-    background-color: #333;
+    background-color: #e0e0e0;
     border-radius: 5px;
 }
 
 .tim figure.image-box audio::-moz-media-controls-play-button {
-    background-color: #f39c12 !important;
+    background-color: #4a8aff !important;
     border-radius: 50%;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .tim figure.image-box {
         width: 150px;
@@ -571,7 +566,7 @@ nav button:hover {
     }
 
     .tim figure.image-box audio {
-        height: 30px; /* Smaller on tablets for space */
+        height: 30px;
     }
 }
 
@@ -590,7 +585,7 @@ nav button:hover {
     }
 
     .tim figure.image-box audio {
-        height: 25px; /* Even smaller on mobile for space */
+        height: 25px;
     }
 }
 
@@ -602,12 +597,12 @@ nav button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Light overlay for custom lightbox */
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    animation: fadeIn 0.5s forwards; 
+    animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -620,14 +615,14 @@ nav button:hover {
 }
 
 .custom-lightbox-content {
-    background-color: transparent;
+    background-color: transparent; /* Keep transparent for image display */
     padding: 0;
     border-radius: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -643,7 +638,7 @@ nav button:hover {
 
 #custom-lightbox-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Close button styling */
@@ -652,14 +647,14 @@ nav button:hover {
     top: 1rem;
     right: 1rem;
     font-size: 1.5rem;
-    color: #fff;
+    color: #333; /* Dark for better visibility on light background */
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 /* Hover effect for close button */
 .custom-close:hover {
-    color: #f1f1f1; 
+    color: #666; /* Slightly darker on hover for effect */
 }
 
 /* Image container */
@@ -686,11 +681,12 @@ nav button:hover {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5; /* Light background for images */
 }
 
 /* Hover effect for image box */
 .image-box:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -705,8 +701,8 @@ nav button:hover {
 
 /* Hover effect for images inside the image box */
 .tim img:hover {
-    transform: scale(1.05); /* Slightly enlarge the image */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Description text below images */
@@ -714,14 +710,14 @@ nav button:hover {
     display: block;
     font-size: 0.9rem;
     margin-top: 0.5rem;
-    color: #333;
+    color: #666; /* Slightly lighter text for descriptions */
     text-align: center;
     transition: color 0.3s ease;
 }
 
 /* Hover effect for description text */
 .image-box:hover .image-description {
-    color: #f1f1f1; /* Lighter text color on hover */
+    color: #333; /* Darker text on hover for emphasis */
 }
 
 /* Responsive Design */
@@ -739,25 +735,25 @@ nav button:hover {
     }
 
     .image-description {
-        font-size: 0.75rem; /* Adjusted font size for smaller screens */
+        font-size: 0.75rem;
     }
 }
 
 .tim h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     line-height: 1.4;
-    margin-bottom: 1.5rem; /* Increased spacing */
+    margin-bottom: 1.5rem;
     text-align: center;
     position: relative;
     padding: 1.2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(to right, #e0e0e0, #f5f5f5); /* Light gradient for header */
     max-width: 90%;
-    margin: 1rem auto; /* Added top & bottom margin */
+    margin: 1rem auto;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -765,19 +761,19 @@ nav button:hover {
 .tim h2:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #444, #333);
+    background: linear-gradient(to right, #f5f5f5, #e0e0e0);
 }
 
 .tim p {
     font-size: 1.2rem;
-    color: #fff; 
+    color: #333; /* Dark text for contrast on light background */
     line-height: 1.6;
     text-align: center;
-    margin: 1rem auto 1.5rem; /* Added top margin */
+    margin: 1rem auto 1.5rem;
     padding: 1rem;
     font-weight: 400;
     max-width: 850px;
-    background: linear-gradient(135deg, #333, #444);
+    background: #f5f5f5; /* Light background */
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
@@ -790,18 +786,21 @@ nav button:hover {
 
 button {
     background-color: transparent;
-    border: none;
-    color: white;
+    border: 2px solid #4a8aff; /* Light border for visibility */
+    color: #333;
     font-size: 30px;
     cursor: pointer;
+    border-radius: 5px; /* Rounded corners for modern look */
 }
 
 button:hover {
-    background-color: #666;
+    background-color: #e0e0e0;
+    color: #0057ff; /* A bit darker blue on hover for contrast */
 }
 
 button:focus {
     outline: none;
+    border-color: #0057ff; /* Highlight border color on focus */
 }
 
 /* Tablet (medium screens) */
@@ -840,9 +839,9 @@ button:focus {
 
 .main-section {
     padding: 3rem;
-    background: linear-gradient(to right, #333, #444);
+    background: linear-gradient(to right, #f5f5f5, #e0e0e0); /* Light gradient background */
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     margin: 3rem auto;
     max-width: 1200px;
     font-family: 'Arial', sans-serif;
@@ -860,7 +859,7 @@ button:focus {
 
 .main-section h2 {
     font-size: 3rem;
-    color: #fff; /* White text color */
+    color: #333; 
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 1.5rem;
@@ -868,10 +867,10 @@ button:focus {
     position: relative;
     padding: 1.5rem;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    background: rgba(255, 255, 255, 0.7); /* Light semi-transparent background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: slideIn 1s ease-out;
-    transition: transform 0.3s ease, background 0.3s ease; /* Hover transition */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 @keyframes slideIn {
@@ -884,28 +883,28 @@ button:focus {
 }
 
 .main-section h2:hover {
-    transform: scale(1.05); /* Slight scaling effect on hover */
-    background: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .main-section p {
     font-size: 1.2rem;
-    color: #fff; /* White text color */
+    color: #333; 
     line-height: 1.6;
     text-align: justify;
     margin-top: 0;
     margin-bottom: 1.5rem;
     padding: 1rem;
     font-weight: 400;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease; /* Hover transition */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .main-section p:hover {
-    transform: scale(1.02); /* Slight scaling effect on hover */
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .lore {
@@ -918,7 +917,7 @@ button:focus {
 
 .story h2 {
     font-size: 2.5rem;
-    color: #fff; /* White text color */
+    color: #333;
     font-weight: bold;
     line-height: 1.4;
     margin-bottom: 1rem;
@@ -926,34 +925,34 @@ button:focus {
     position: relative;
     padding: 1.2rem;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease; /* Hover transition */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .story h2:hover {
-    transform: scale(1.05); /* Slight scaling effect on hover */
-    background: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .story p {
     font-size: 1.1rem;
-    color: #fff; /* White text color */
+    color: #333;
     line-height: 1.5;
     text-align: justify;
     margin-top: 0;
     margin-bottom: 1.5rem;
     padding: 0 1.5rem;
     font-weight: 400;
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease; /* Hover transition */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .story p:hover {
-    transform: scale(1.02); /* Slight scaling effect on hover */
-    background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -1003,6 +1002,7 @@ button:focus {
         padding: 0 1rem;
     }
 }
+
 /* Lightbox Styles */
 .jeff-lightbox {
     position: fixed;
@@ -1010,7 +1010,7 @@ button:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Light overlay for lightbox */
     display: none;
     justify-content: center;
     align-items: center;
@@ -1033,18 +1033,17 @@ button:focus {
     max-width: 100%;
     max-height: 90vh;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
 }
-
 
 /* Arrows Navigation */
 #jeff-prev, #jeff-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(255, 255, 255, 0.5); /* Light background for arrows */
+    color: #333; /* Dark text for contrast */
     font-size: 30px;
     padding: 10px;
     border: none;
@@ -1055,33 +1054,33 @@ button:focus {
 }
 
 #lightbox, #custom-lightbox, #jeff-lightbox {
-    display: none; /* Ensure it's hidden initially */
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.8); /* Light overlay */
     justify-content: center;
     align-items: center;
 }
 
 #jeff-prev {
-    left: 10px;  /* Far left */
+    left: 10px;
 }
 
 #jeff-next {
-    right: 10px; /* Far right */
+    right: 10px;
 }
 
 /* Arrow hover effect */
 #jeff-prev:hover, #jeff-next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /* Disabled state for arrows */
 #jeff-prev:disabled, #jeff-next:disabled {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     cursor: not-allowed;
 }
 
@@ -1101,30 +1100,30 @@ button:focus {
     margin: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover effect for thumbnails */
 #jeffimg img:hover {
-    transform: scale(1.05);  /* Slightly zoom in */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  /* Darker and larger shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 #jeff h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #333;
     line-height: 1.4;
-    margin-bottom: 1.5rem; /* Increased spacing */
+    margin-bottom: 1.5rem;
     text-align: center;
     position: relative;
     padding: 1.2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(to right, #e0e0e0, #f5f5f5); /* Light gradient background */
     max-width: 90%;
-    margin: 1rem auto; /* Added top & bottom margin */
+    margin: 1rem auto;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -1132,7 +1131,7 @@ button:focus {
 #jeff h2:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #444, #333);
+    background: linear-gradient(to right, #f5f5f5, #e0e0e0);
 }
 
 /* Mobile View */
@@ -1152,10 +1151,10 @@ button:focus {
 }
 
 #forms .pie-chart-container {
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(to right, #f5f5f5, #e0e0e0); /* Light gradient for container */
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -1164,7 +1163,7 @@ button:focus {
     max-width: 90%;
     margin: 0 auto;
     transition: background 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Prevents scrollbars by default */
+    overflow: hidden;
 }
 
 /* Responsive iframe styles */
@@ -1177,39 +1176,37 @@ button:focus {
     box-sizing: border-box;
     border: none;
     display: block;
-    overflow: hidden; /* Prevent scrollbars initially */
+    overflow: hidden;
 }
-
 
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
     #forms .pie-chart-container {
-        overflow: auto; /* Allow scrolling */
+        overflow: auto;
     }
 
     .responsive-iframe {
         overflow: auto;
-        scrollbar-width: thin; /* Visible but minimal scrollbar */
+        scrollbar-width: thin;
     }
 }
 
 /* Small screens (mobile devices) */
 @media (max-width: 768px) {
     #forms .pie-chart-container {
-        overflow: auto; /* Enable scrolling */
+        overflow: auto;
     }
 
     .responsive-iframe {
         overflow: auto;
         scrollbar-width: thin;
-        -ms-overflow-style: auto;
     }
 }
 
 /* Extra small screens (phones) */
 @media (max-width: 480px) {
     #forms .pie-chart-container {
-        overflow: auto; /* Allow scrolling */
+        overflow: auto;
     }
 
     .responsive-iframe {
@@ -1217,6 +1214,17 @@ button:focus {
         scrollbar-width: thin;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* #forms .pie-chart-container iframe:hover {
     transform: scale(1.05);
@@ -1226,7 +1234,7 @@ button:focus {
 #forms-header h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #fff;
+    color: #333;  /* Dark text for contrast in light mode */
     line-height: 1.4;
     margin-bottom: 1.5rem; /* Increased spacing */
     text-align: center;
@@ -1235,7 +1243,7 @@ button:focus {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(135deg, #f7f7f7, #e2e2e2); /* Light background gradient */
     max-width: 90%;
     margin: 1rem auto; /* Added top & bottom margin */
     word-wrap: break-word;
@@ -1245,7 +1253,7 @@ button:focus {
 #forms-header h2:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(135deg, #444, #333);
+    background: linear-gradient(135deg, #e2e2e2, #f7f7f7); /* Lighter gradient on hover */
 }
 
 /* Styling the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
@@ -1256,30 +1264,30 @@ button:focus {
 
 /* Track of the scrollbar (background) */
 ::-webkit-scrollbar-track {
-    background: #333;  /* Darker gray background */
+    background: #f7f7f7;  /* Lighter background */
     border-radius: 10px;  /* Rounded corners */
 }
 
 /* Thumb of the scrollbar (the draggable part) */
 ::-webkit-scrollbar-thumb {
-    background: #444;  /* Slightly lighter gray for the thumb */
+    background: #ddd;  /* Lighter gray for the thumb */
     border-radius: 10px;  /* Rounded thumb */
 }
 
 /* Hover state of the thumb */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;  /* Darker gray on hover */
+    background: #ccc;  /* Slightly darker gray on hover */
 }
 
 /* Firefox scrollbar styling */
 * {
     scrollbar-width: thin;  /* Thin scrollbar */
-    scrollbar-color: #444 #333; /* Thumb color and track color */
+    scrollbar-color: #ddd #f7f7f7; /* Thumb color and track color */
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #f7f7f7;  /* Light background */
+    color: #333;  /* Dark text for contrast */
     text-align: center;
     padding: 1rem;
     position: relative;
@@ -1288,5 +1296,5 @@ footer {
 }
 
 main {
-    background-color: #302f2f9a;
+    background-color: #f2f2f2;  /* Light gray background */
 }

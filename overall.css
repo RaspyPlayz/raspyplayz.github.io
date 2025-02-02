@@ -1,0 +1,18 @@
+nav button {
+    margin: 0 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    transform-origin: center;
+    background: none; /* Remove any default background from button */
+    border: none; /* Remove button borders */
+    padding: 0; /* Remove padding for consistency */
+    cursor: pointer; /* Add pointer cursor for button */
+    font-size: 1rem; /* Ensure the font size matches the links */
+    line-height: normal; /* Adjust line-height to prevent oversized text */
+    border-radius: 5px;
+}
+
+nav button:hover {
+    transform: scale(1.3);
+}

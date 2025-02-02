@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" author="Keesh">
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link href="colors.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" id="theme-stylesheet"/>
+    <link href="colors.css" rel="stylesheet" type="text/css"/>
+    <link href="light.css">
+    <link href="overall.css" rel="stylesheet" tyle="text/css">
+
     <title>The Jefferina Maverick Fanclub</title>
 </head>
 <body>
@@ -16,7 +20,9 @@
         <a href="#people">People</a>
         <a href="#tim">Timmy</a>
         <a href="#asa">Two Piece</a>
+        <a href="#forms">Jefferina Google Forms</a>
         <a href="#jeff">Jefferina Maverick Herself</a>
+        <button id="themeToggleBtn" class="theme-toggle-btn">Switch to Light Mode</button>
     </nav>
     <main>
         <div class="intro" id="intro">
@@ -25,7 +31,7 @@
             <p>We make 9/11 jokes that are as dark as the coffee you spill when reading them, and Hitler humor that's so bad, it's almost good... or just bad. We've got border hopping gags that might make you reconsider your travel plans, Hiroshima and Nagasaki punchlines that are historically inaccurate but comedically tragic, baldness jests that'll make you glad you kept your sunglasses on, and age-old humor about the, well, old.</p>
             <p>So, if you’re looking for a place to chill, laugh, and maybe question your life choices, you’re in the right spot. Welcome to the madness—good luck surviving.</p>
         </div>
-        <h2>People In The Server!</h2>
+        <h2 id="people-heading">People In The Server!</h2>
 <div class="flex-container" id="people">
     <div class="person" onclick="openPersonLightbox('Axolotl', 'Axolotl aka Alex is an illegal immigrant from Mexico. He has dementia and might be a femboy.')">Axolotl</div>
     <div class="person" onclick="openPersonLightbox('CAKE MASTER', 'CAKE MASTER aka Brayden has the biggest cake ever. Watch out he might put a hole in your wall.')">CAKE MASTER</div>
@@ -38,39 +44,62 @@
     <div class="person" onclick="openPersonLightbox('The Ultra Bigman', 'The Ultra Bigman aka Daley is the biggest out of everyone. He might also be our biological Dad somehow.')">The Ultra Bigman</div>
 </div>
 
-        <div class="tim">
-            <h2>Big Dick Timmy</h2>
-            <p>Big Dick Timmy is a parody album created around the idea of our teacher Schwindy, affectionately called "Big Dick Randy." The album features parodies of well-known songs, all of which were reimagined with humorous lyrics. Drug God took the lead by singing over all the tracks, bringing a unique twist to each one. The Big Flame Man designed the album covers, capturing the quirky essence of the project. Keesh worked as the producer, ensuring the album came together smoothly. The entire album was made as a fun tribute to Axolotl, with the chaos and humor that defined the project.</p>
-            <div class="image-container">
-                <div class="image-box" onclick="openCustomLightbox('Big Tim 1.png')">
-                    <img src="Big Tim 1.png" alt="Big Tim 1">
-                    <p class="image-description">Big Tim 1: Timmy's Cupcake.</p>
-                </div>
-                <div class="image-box" onclick="openCustomLightbox('Big Tim 2.png')">
-                    <img src="Big Tim 2.png" alt="Big Tim 2">
-                    <p class="image-description">Big Tim 2: Timmy and his "helpers".</p>
-                </div>
-                <div class="image-box" onclick="openCustomLightbox('Big Tim 3.png')">
-                    <img src="Big Tim 3.png" alt="Big Tim 3">
-                    <p class="image-description">Big Tim 3: Despicable Tim.</p>
-                </div>
-                <div class="image-box" onclick="openCustomLightbox('Big Tim Returns.png')">
-                    <img src="Big Tim Returns.png" alt="Big Tim Returns">
-                    <p class="image-description">Big Tim Returns: Thanksgiving Day Timmy.</p>
-                </div>
-                <div class="image-box" onclick="openCustomLightbox('Big Tim Christmas.png')">
-                    <img src="Big Tim Christmas.png" alt="Big Tim Christmas">
-                    <p class="image-description">Big Tim Christmas: Timmy as the Grinch.</p>
-                </div>
-            </div>
-            
-            <!-- tim lightbox -->
+<div class="tim">
+    <h2>Big Dick Timmy</h2>
+    <p>Big Dick Timmy is a parody album created around the idea of our teacher Schwindy, affectionately called "Big Dick Randy." The album features parodies of well-known songs, all of which were reimagined with humorous lyrics. Drug God took the lead by singing over all the tracks, bringing a unique twist to each one. The Big Flame Man designed the album covers, capturing the quirky essence of the project. Keesh worked as the producer, ensuring the album came together smoothly. The entire album was made as a fun tribute to Axolotl, with the chaos and humor that defined the project.</p>
+    <div class="image-container">
+        <figure class="image-box">
+            <img src="timimg\Big Tim 1.png" alt="Big Tim 1">
+            <figcaption class="image-description">Big Tim 1: Timmy's Cupcake</figcaption>
+            <audio controls>
+                <source src="timpreview\tim1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </figure>
+        <figure class="image-box">
+            <img src="timimg\Big Tim 2.png" alt="Big Tim 2">
+            <figcaption class="image-description">Big Tim 2: Timmy And His "Helpers"</figcaption>
+            <audio controls>
+                <source src="timpreview\tim2.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </figure>
+        <figure class="image-box">
+            <img src="timimg\Big Tim 3.png" alt="Big Tim 3">
+            <figcaption class="image-description">Big Tim 3: Despicable Tim</figcaption>
+            <audio controls>
+                <source src="timpreview\tim3.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </figure>
+        <figure class="image-box">
+            <img src="timimg\Big Tim Returns.png" alt="Big Tim Returns">
+            <figcaption class="image-description">Big Tim Returns: Timmy's Thanksgiving Feast</figcaption>
+            <audio controls>
+                <source src="timpreview\timr.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </figure>
+        <figure class="image-box">
+            <img src="timimg\Big Tim Christmas.png" alt="Big Tim Christmas">
+            <figcaption class="image-description">Big Tim Christmas: How Timmy Stole Christmas</figcaption>
+            <audio controls>
+                <source src="timpreview\timc.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </figure>
+    </div>
+</div>
+
+
     <div id="custom-lightbox" class="custom-lightbox">
         <div class="custom-lightbox-content">
             <span id="custom-close" class="custom-close">&times;</span>
             <img id="custom-lightbox-image" src="" alt="Lightbox Image">
         </div>
     </div>
+</div>
+
     <div class="main-section asa" id="asa">
             <h2>Two Piece</h2>
             <p>Dive into the thrilling world of Two Piece, a custom experience powered by the ASA One Piece addon on Minecraft Bedrock. Set on a meticulously crafted map of the First Sea from One Piece, players embark on an epic journey filled with excitement, challenges, and camaraderie. With the ultimate goal of becoming the King of the Pirates, the adventure is driven by rich lore unique to our community. Whether you're exploring uncharted islands, battling formidable foes, or forging alliances with fellow adventurers, Two Piece offers a dynamic and immersive experience where fun and creativity take center stage. Bepo Is the Greatest Polar Bear To Ever Exist.</p>
@@ -121,27 +150,60 @@
                   </section>
                 </div>
         </div>
-        <div id="jeff">
-            <h2>Jefferina Maverick</h2>
-        </div>
-        <div id="jeffimg">
-            <img src="IMG_5166.jpg" alt="Jefferina 1">
-            <img src="IMG_5167.jpg" alt="Jefferina 2">
-            <img src="IMG_5168.jpg" alt="Jefferina 3">
-            <img src="IMG_5169.jpg" alt="Jefferina 4">
-            <img src="IMG_5170.jpg" alt="Jefferina 5">
-        </div>
-    
-        <div id="jeffview" class="hidden">
-            <div class="jeffviewcont">
-                <button id="prev">&lt;</button>
-                <img id="image-viewer-img" src="" alt="">
-                <button id="next">&gt;</button>
-            </div>
-        </div>
-    
-</body>
-</html>
+
+<div id="forms" class="forms">
+    <div id="forms-header">
+    <h2>2024 Jefferina Google Forms</h2>
+</div>
+    <div class="pie-chart-container">
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1069109868&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=298642525&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1312449616&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=343389173&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=212160534&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1289579207&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=68431353&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=674742409&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=393585856&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=496953506&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=676930850&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1774903561&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1431751350&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1431751350&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=764573180&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1848940295&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1841510719&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1092691549&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=1092691549&amp;format=interactive"></iframe>
+        <iframe class="responsive-iframe"  seamless frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIuPDzCUawzH2ET3ucWPqfCq5m3a6uY-agI9LEkt5TPNsLZO_Dux0a0yX5RKuuEUB3pfLAiBaX8vgK/pubchart?oid=114702080&amp;format=interactive"></iframe>
+    </div>
+</div>
+
+
+<div id="jeff">
+    <h2>Jefferina Maverick</h2>
+</div>
+<div id="jeffimg">
+    <img src="jeff\IMG_5166.jpg" alt="Jefferina 1">
+    <img src="jeff\IMG_5167.jpg" alt="Jefferina 2">
+    <img src="jeff\IMG_5168.jpg" alt="Jefferina 3">
+    <img src="jeff\IMG_5169.jpg" alt="Jefferina 4">
+    <img src="jeff\IMG_5170.jpg" alt="Jefferina 5">
+</div>
+
+
+<div class="jeff-lightbox" id="jeff-lightbox">
+    <div class="jeff-lightbox-content">
+        <button id="jeff-prev" class="jeff-arrow">&#8249;</button> 
+        <img id="jeff-lightbox-image" src="" alt="Lightbox Image1">
+        <button id="jeff-next" class="jeff-arrow">&#8250;</button> 
+        <span class="custom-close" id="jeff-close">&times;</span>
+    </div>
+</div>
+
+
+
+
     </main>
     <footer>
         <p>&copy; 2025 Real Keesh Inc.</p>
