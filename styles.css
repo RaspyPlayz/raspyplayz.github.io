@@ -115,6 +115,16 @@ nav {
     transition: background-color 0.3s ease;
 }
 
+@media (max-width: 1024px) {
+
+    nav a:nth-child(5) {
+
+        display: none;
+
+    }
+
+}
+
 nav:hover {
     background-color: #333; 
 }
@@ -1184,37 +1194,33 @@ button:focus {
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
     #forms .pie-chart-container {
-        overflow: auto; /* Allow scrolling */
+        display: none;
     }
 
     .responsive-iframe {
-        overflow: auto;
-        scrollbar-width: thin; /* Visible but minimal scrollbar */
+        display: none;
     }
 }
 
 /* Small screens (mobile devices) */
 @media (max-width: 768px) {
     #forms .pie-chart-container {
-        overflow: auto; /* Enable scrolling */
+        display: none;
     }
 
     .responsive-iframe {
-        overflow: auto;
-        scrollbar-width: thin;
-        -ms-overflow-style: auto;
+        display: none;
     }
 }
 
 /* Extra small screens (phones) */
 @media (max-width: 480px) {
     #forms .pie-chart-container {
-        overflow: auto; /* Allow scrolling */
+        display: none;
     }
 
     .responsive-iframe {
-        overflow: auto;
-        scrollbar-width: thin;
+        display: none;
     }
 }
 
@@ -1246,6 +1252,34 @@ button:focus {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #444, #333);
+}
+
+@media (max-width: 1024px) {
+    #forms-header {
+        display: none;
+    }
+
+    .responsive-iframe {
+        display: none;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    #forms-header {
+        display: none;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+    #forms-header {
+        display: none;
+    }
+
+    #forms-header {
+        display: none;
+    }
 }
 
 /* Styling the scrollbar for WebKit browsers (Chrome, Safari, Edge) */
