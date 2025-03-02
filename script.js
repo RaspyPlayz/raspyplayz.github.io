@@ -175,7 +175,36 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     } else { // Currently in light mode
         themeStylesheet.setAttribute('href', 'styles.css');
-        themeToggleBtn.textContent = 'Switch to Enzo Mode';
+        themeToggleBtn.textContent = 'Switch to Light Mode';
         localStorage.setItem('theme', 'dark');
     }
 });
+
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the close button
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Get the iframe
+        var iframe = document.getElementById("video");
+
+        // Display the modal after the page loads
+        window.onload = function() {
+            modal.style.display = "block";
+        };
+
+        // When the user clicks on the close button, close the modal and stop the video
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            iframe.src = ""; // Stop the video
+        };
+
+        // When the user clicks outside of the modal, close it and stop the video
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                iframe.src = ""; // Stop the video
+            }
+        };
