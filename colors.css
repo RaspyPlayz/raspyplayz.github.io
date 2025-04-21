@@ -14,31 +14,36 @@
   }
 
   .person:nth-child(4) {
+    background-color: rgb(21,61,69);
+    color: rgb(0,243,216);
+  }
+
+  .person:nth-child(5) {
     background-color: rgb(65,30,60);
     color: rgb(210,29,154);
   }
 
-  .person:nth-child(5) {
+  .person:nth-child(6) {
     background-color: rgb(45,32,41);
     color: rgb(151,44,34);
   }
 
-  .person:nth-child(6) { 
+  .person:nth-child(7) { 
     background-color: rgb(39,46,55);
     color: rgb(49,144,208);
   }
 
-  .person:nth-child(7) {
+  .person:nth-child(8) {
     background-color: rgb(33,46,40);
     color: rgb(16,121,101);
   }
 
-  .person:nth-child(8) {
+  .person:nth-child(9) {
     background-color: rgb(65,47,30);
     color: rgb(221,121,33);
   }
 
-  .person:nth-child(9) {
+  .person:nth-child(10) {
     background-color: rgb(66,59,28);
     color: rgb(228,185,14);
   }

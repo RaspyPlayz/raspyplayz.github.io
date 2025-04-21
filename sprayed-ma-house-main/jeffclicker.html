@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jefferina Clicker</title>
+    <link rel="stylesheet" href="clicker.css">
+</head>
+<body>
+    <!-- Loading Indicator -->
+    <div id="loading" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 24px;">
+        Loading...
+    </div>
+    <button id="achievements-button">🏆 View Achievements</button>
+    <button id="menu-toggle">☰ Menu</button>
+    <div class="game-container hidden">
+        <div class="left-column">
+            <div class="clicker-section">
+                <h1>Jefferina Clicker</h1>
+                <p>Score: <span id="score">0</span></p>
+                <img id="clicker" src="images/clicker.png" alt="Clicker" class="clicker-btn">
+            </div>
+            <div id="shop">
+                <h2>Upgrades</h2>
+                <div class="upgrade-item">
+                    <img id="upgrade-click" src="images/upgrade.png" alt="Upgrade Click" class="upgrade-btn">
+                    <p> Click Power +1 | Cost: <span id="cost-click">10</span></p>
+                </div>
+                <div class="upgrade-item">
+                    <img id="upgrade-auto" src="images/autoclicker.png" alt="Auto Clicker" class="upgrade-btn">
+                    <p> Auto-Clicker (+1/sec) | Cost: <span id="cost-auto">50</span></p>
+                </div>
+                <div class="upgrade-item">
+                    <img id="upgrade-multiplier" src="images/multiplier.png" alt="Multiplier" class="upgrade-btn">
+                    <p> Multiplier x2 | Cost: <span id="cost-multiplier">100</span></p>
+                </div>
+            </div>
+            <div id="prestige">
+                <h2>Prestige</h2>
+                <p>Current Prestige Points: <span id="prestige-points">0</span></p>
+                <p>Prestige Threshold: <span id="prestige-threshold">1000000</span></p>
+                <button id="prestige-btn" class="hidden">Prestige</button>
+                <div id="prestige-message" class="hidden">You have prestiged!</div>
+            </div>
+        </div>
+        <div id="achievements">
+            <h2>Achievements</h2>
+            <ul id="achievement-list"></ul>
+        </div>
+    </div>
+    <div id="prestige-confirm-popup" class="popup hidden">
+        <div class="popup-box">
+            <p>
+                <strong>Are you sure you want to Prestige?</strong><br>
+                This will <span style="color:#ff4444;">reset all progress</span><br>
+                but grant a <span style="color:#00ff99;">permanent boost</span>.<br><br>
+                Proceed?
+            </p>
+            <button id="confirm-prestige">Yes, Prestige</button>
+            <button id="cancel-prestige">No, Cancel</button>
+        </div>
+    </div>
+    <div id="menu-popup" class="hidden">
+        <div id="menu-box"></div>
+    </div>
+    <div id="leaderboard-display" class="popup hidden">
+        <div class="popup-box">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list"></ul>
+            <button id="close-leaderboard">Close</button>
+        </div>
+    </div>
+    <!-- Firebase SDK -->
+    <script defer src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js"></script>
+    <script defer src="clicker.js"></script>
+    <script defer src="prestige.js"></script>
+    <script type="module" src="account.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- https://console.firebase.google.com/u/0/project/jefferina-clicker/overview -->
