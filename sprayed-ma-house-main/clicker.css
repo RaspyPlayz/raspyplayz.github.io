@@ -480,3 +480,147 @@ p {
     z-index: 1000;
     animation: fadeIn 0.4s ease-out;
 }
+
+/* Responsive Design */
+
+/* Medium Screens (600px to 999px) */
+@media (max-width: 999px) {
+    .game-container {
+        max-width: 100%; /* Use full width */
+        flex-direction: column; /* Stack left-column and achievements vertically */
+        padding: 15px;
+    }
+
+    .left-column {
+        flex: none; /* Remove flex ratio since we're stacking */
+        width: 100%;
+    }
+
+    .clicker-section, #shop {
+        padding: 10px;
+    }
+
+    #achievements {
+        flex: none;
+        width: 100%;
+        padding: 15px;
+    }
+
+    #achievement-list li {
+        width: calc(50% - 5px); /* Keep two items per row */
+        font-size: 16px; /* Slightly smaller font */
+        margin-bottom: 8px;
+        padding-left: 25px;
+    }
+
+    #achievement-list li::before {
+        font-size: 1.3em; /* Slightly smaller star icon */
+        left: 3px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .clicker-btn, .upgrade-btn {
+        max-width: 200px; /* Slightly smaller clicker image */
+    }
+
+    #prestige-btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+
+    #achievements-button, #menu-toggle {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Screens (below 600px) */
+@media (max-width: 599px) {
+    body {
+        padding: 10px; /* Reduce body padding */
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+
+    .clicker-section, #shop {
+        padding: 8px;
+    }
+
+    #achievements {
+        padding: 10px;
+    }
+
+    #achievements h2 {
+        font-size: 1.2rem;
+    }
+
+    #achievement-list {
+        gap: 8px;
+    }
+
+    #achievement-list li {
+        width: 100%; /* One item per row for better readability */
+        font-size: 14px;
+        margin-bottom: 6px;
+        padding-left: 20px;
+    }
+
+    #achievement-list li::before {
+        font-size: 1.2em;
+        left: 2px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .clicker-btn, .upgrade-btn {
+        max-width: 150px; /* Smaller clicker image */
+    }
+
+    #prestige-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #achievements-button, #menu-toggle {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    #menu-box {
+        width: 90%; /* Use more of the screen width */
+        padding: 20px;
+    }
+
+    #menu-box button, #menu-box input {
+        width: 90%;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .popup-box {
+        width: 90%;
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .popup-box button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    #leaderboard-list li {
+        font-size: 14px;
+    }
+
+    #close-leaderboard {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
